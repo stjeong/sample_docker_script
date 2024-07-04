@@ -1,2 +1,2 @@
 FROM ubuntu:latest
-RUN apt-get -y update && apt-get -y install net-tools socat
+RUN apt-get -y update && apt-get -y install net-tools socat kmod
