@@ -1,0 +1,6 @@
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0
+
+RUN apt-get update && apt-get install -y --no-install-recommends clang zlib1g-dev
+
+# docker build -t ubutil -f https://raw.githubusercontent.com/stjeong/sample_docker_script/main/dockerfile.net8 .
