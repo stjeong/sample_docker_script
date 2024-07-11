@@ -1,5 +1,5 @@
 
-FROM ubuntu:20.04
+FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y --no-install-recommends clang zlib1g-dev wget ca-certificates
 
@@ -9,5 +9,5 @@ RUN rm packages-microsoft-prod.deb
 
 RUN apt update && apt install -y dotnet-sdk-8.0
 
-# docker build -t net8_ubuntu20_build -f https://raw.githubusercontent.com/stjeong/sample_docker_script/main/dockerfile.ubuntu20.net8 .
-# docker run -it --rm net8_ubuntu20_build /bin/bash
+# docker build -t net8_ubuntu18_build -f https://raw.githubusercontent.com/stjeong/sample_docker_script/main/dockerfile.ubuntu18.net8 .
+# docker run -it --rm net8_ubuntu18_build /bin/bash

@@ -3,4 +3,4 @@ FROM busybox:1.28
 ENV TZ=Asia/Seoul
 RUN DEBIAN_FRONTEND=noninteractive
 
-# docker build -t ubutil -f https://raw.githubusercontent.com/stjeong/sample_docker_script/main/dockerfile.busybox .
+# docker build -t busybox -f https://raw.githubusercontent.com/stjeong/sample_docker_script/main/dockerfile.busybox .
