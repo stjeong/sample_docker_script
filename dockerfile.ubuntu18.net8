@@ -9,6 +9,7 @@ RUN rm packages-microsoft-prod.deb
 
 RUN apt update && apt install -y
 RUN apt install -y dotnet-sdk-8.0
+ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # docker build -t net8_ubuntu18_build -f https://raw.githubusercontent.com/stjeong/sample_docker_script/main/dockerfile.ubuntu18.net8 .
 # docker run -it --rm net8_ubuntu18_build /bin/bash
