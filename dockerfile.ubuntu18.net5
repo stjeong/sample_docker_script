@@ -9,7 +9,7 @@ RUN rm packages-microsoft-prod.deb
 
 RUN apt update && apt install -y dotnet-sdk-5.0
 RUN dotnet tool install --global dotnet-dump --version 6.0.351802
-ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
+ENV DOTNET_CLI_TELEMETRY_OPTOUT 1
 
 # docker build -t net5_ubuntu18_build -f https://raw.githubusercontent.com/stjeong/sample_docker_script/main/dockerfile.ubuntu18.net5 .
 # docker run -it --rm net5_ubuntu18_build /bin/bash

@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0
 
 RUN apt-get update && apt-get install -y --no-install-recommends clang zlib1g-dev
-ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
+ENV DOTNET_CLI_TELEMETRY_OPTOUT 1
 
 # docker build -t net8_build -f https://raw.githubusercontent.com/stjeong/sample_docker_script/main/dockerfile.net8 .
 # docker run -it --rm net8_build /bin/bash
