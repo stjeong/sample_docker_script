@@ -1,7 +1,7 @@
 
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get install -y --no-install-recommends clang zlib1g-dev wget ca-certificates
+RUN apt-get update && apt-get install -y --no-install-recommends clang zlib1g-dev wget ca-certificates iputils-ping
 
 RUN wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 RUN dpkg -i packages-microsoft-prod.deb
@@ -9,5 +9,8 @@ RUN rm packages-microsoft-prod.deb
 
 RUN apt update && apt install -y dotnet-sdk-2.1
 
+# docker build -t net2_ubuntu18_build -f dockerfile.ubuntu18.net2 .
 # docker build -t net2_ubuntu18_build -f https://raw.githubusercontent.com/stjeong/sample_docker_script/main/dockerfile.ubuntu18.net2 .
+
 # docker run -it --rm net2_ubuntu18_build /bin/bash
+# docker run --network none -it --rm net2_ubuntu18_build /bin/bash
