@@ -8,6 +8,7 @@ RUN dpkg -i packages-microsoft-prod.deb
 RUN rm packages-microsoft-prod.deb
 
 RUN apt update && apt install -y dotnet-sdk-6.0
+ENV DOTNET_CLI_TELEMETRY_OPTOUT 1
 
 # docker build -t net6_ubuntu18_build -f https://raw.githubusercontent.com/stjeong/sample_docker_script/main/dockerfile.ubuntu18.net6 .
 # docker run -it --rm net6_ubuntu18_build /bin/bash
